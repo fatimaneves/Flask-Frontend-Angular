@@ -1,0 +1,178 @@
+<div class="d-flex flex-column flex-root">
+  <!--begin::Page-->
+  <div class="page d-flex flex-row flex-column-fluid">
+    <!--begin::Aside-->
+    <!--end::Aside-->
+    <!--begin::Wrapper-->
+    <div class="wrapper d-flex flex-column flex-row-fluid">
+      <!--begin::Header-->
+      <app-top-navbar></app-top-navbar>
+      <!--end::Header-->
+      <!--begin::Main-->
+      <div class="d-flex flex-column flex-column-fluid">
+        <!--begin::Content-->
+        <div class="content fs-6 d-flex flex-column-fluid">
+          <!--begin::Container-->
+          <div class="container-xxl">
+            <div class="row g-0 g-xl-5 g-xxl-8">
+              <div class="col-xl-12">
+                <!--begin::Stats Widget 8-->
+                <div class="card mb-5 mb-xxl-8">
+                  <!--begin::Body-->
+                  <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column">
+                      <span class="card-label fw-bolder text-dark fs-3">{{userInfo._id.$oid}}</span>
+                      <span class="text-muted mt-2 fw-bold fs-6">Informação do utilizador</span>
+                    </h3>
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-borderless align-middle">
+                        <thead>
+                          <tr>
+                            <th class="p-0 w-50px"></th>
+                            <th class="p-0 min-w-150px"></th>
+                            <th class="p-0 min-w-70px"></th>
+                            <th class="p-0 min-w-70px"></th>
+                            <th class="p-0 min-w-50px"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 py-3">
+                              <div class="symbol symbol-55px mt-1 me-5">
+                                <div class="symbol-label symbol-40px symbol-circle me-4"><span
+                                    class="bg-light-primary text-primary symbol-label fw-boldest">{{userInfo.name | slice:0:2}}</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td *ngIf="userInfo.is_admin">
+                              <span class="text-gray-800 fw-bolder d-block fs-6">Administrador</span>
+                              <span class="text-muted fw-bold d-block mt-1 fs-7">Cargo</span>
+                            </td>
+                            <td *ngIf="!userInfo.is_admin">
+                              <span class="text-gray-800 fw-bolder d-block fs-6">Este utilizador não tem cargos</span>
+                              <span class="text-muted fw-bold d-block mt-1 fs-7">Cargo</span>
+                            </td>
+                            <td class="text-end">
+                              <span class="text-gray-800 fw-bolder d-block fs-6">{{userInfo.name}}</span>
+                              <span class="text-muted fw-bold d-block mt-1 fs-7">Nome do utilizador</span>
+                            </td>
+                            <td class="text-end">
+                              <span class="text-gray-800 fw-bolder d-block fs-6">{{userInfo.email}}</span>
+                              <span class="text-muted fw-bold d-block mt-1 fs-7">Email do utilizador</span>
+                            </td>
+
+                            <td class="text-end pe-0">
+                              <a  data-bs-toggle="modal"
+                              data-bs-target="#modal_cheange_password" class="btn btn-icon btn-bg-light btn-active-warning btn-sm" style="margin-right: 6%;">
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                <span class="svg-icon svg-icon-4">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-gear" viewBox="0 0 16 16">
+                                    <path
+                                      d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492zM5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0z" />
+                                    <path
+                                      d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52l-.094-.319zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115l.094-.319z" />
+                                  </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                              </a>
+                              <a class="btn btn-icon btn-bg-light btn-active-danger btn-sm"
+                                [swal]="{ title: 'Tem a certeza que quer remover o utilizador '+ userInfo.name + ' com o id:' + userInfo._id.$oid, showCancelButton: true, icon: 'warning'}"
+                                (confirm)="deleteUser()">
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                <span class="svg-icon svg-icon-4">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path
+                                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                    <path fill-rule="evenodd"
+                                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                  </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!--end::Body-->
+                  <!--begin::Footer-->
+
+                </div>
+                <!--end::Stats Widget 8-->
+                <!--begin::Stats Widget 9-->
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modal_cheange_password" tabindex="-1" aria-modal="true" style="display: none;" role="dialog">
+  <!--begin::Modal dialog-->
+  <div class="modal-dialog mw-1000px">
+    <!--begin::Modal content-->
+    <div class="modal-content">
+      <!--begin::Modal header-->
+      <div class="modal-header">
+        <!--begin::Title-->
+        <h2>Alterar password</h2>
+        <!--end::Title-->
+        <!--begin::Close-->
+        <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+          <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+          <span class="svg-icon svg-icon-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)"
+                fill="currentColor"></rect>
+              <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor">
+              </rect>
+            </svg>
+          </span>
+          <!--end::Svg Icon-->
+        </div>
+        <!--end::Close-->
+      </div>
+      <!--end::Modal header-->
+      <!--begin::Modal body-->
+      <form [formGroup]="changePasswordForm" (ngSubmit)="onChangePassword()">
+        <div class="modal-body">
+          <div class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework p-5">
+            <!--begin::Title-->
+            <div class="pb-5 pb-lg-15">
+              <h3 class="fw-bolder text-dark display-6">Alterar password</h3>
+              <p class="text-muted fw-bold fs-3">Preencha o campo</p>
+            </div>
+           
+            <div class="fv-row mb-5 fv-plugins-icon-container">
+              <label class="form-label fs-6 fw-bolder text-dark pt-5">Palavra-passe</label>
+              <input class="form-control form-control-lg form-control-solid" type="password" formControlName="new_password"
+                placeholder="" name="password" autocomplete="off">
+                <div class="fv-plugins-message-container invalid-feedback"
+                *ngIf="changePasswordForm.get('password')?.touched && changePasswordForm.get('password')?.invalid">
+                <div>É necessario preencher este campo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--begin::Modal footer-->
+        <div class="modal-footer d-flex justify-content-end">
+          <a href="#" class="btn btn-active-light me-5" data-bs-dismiss="modal">Cancelar</a>
+          <button type="submit" class="btn btn-primary" [disabled]="changePasswordForm.invalid"
+            data-bs-dismiss="modal">Alterar password do utilizador</button>
+        </div>
+      </form>
+      <!--end::Modal footer-->
+    </div>
+    <!--end::Modal content-->
+  </div>
+  <!--end::Modal dialog-->
+</div>

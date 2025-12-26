@@ -1,0 +1,202 @@
+<div class="d-flex flex-column flex-root">
+  <!--begin::Page-->
+  <div class="page d-flex flex-row flex-column-fluid">
+    <!--begin::Aside-->
+    <!--end::Aside-->
+    <!--begin::Wrapper-->
+    <div class="wrapper d-flex flex-column flex-row-fluid">
+      <!--begin::Header-->
+      <app-top-navbar></app-top-navbar>
+      <!--end::Header-->
+      <!--begin::Main-->
+      <div class="d-flex flex-column flex-column-fluid">
+        <!--begin::Content-->
+        <div class="content fs-6 d-flex flex-column-fluid">
+          <!--begin::Container-->
+          <div class="container-xxl">
+            <div class="row g-0 g-xl-5 g-xxl-8">
+              <div class="col-xl-12">
+                <!--begin::Stats Widget 8-->
+                <div class="card mb-5 mb-xxl-8">
+                  <!--begin::Body-->
+                  <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column">
+                      <span class="card-label fw-bolder text-dark fs-3">{{simulationInfo._id.$oid}}</span>
+                      <span class="text-muted mt-2 fw-bold fs-6">Informação da simulationInfoulação</span>
+
+                    </h3>
+
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-borderless align-middle">
+                        <thead>
+                          <tr>
+                            <th class="p-0 w-50px"></th>
+                            <th class="p-0 min-w-150px"></th>
+                            <th class="p-0 min-w-70px"></th>
+                            <th class="p-0 min-w-70px"></th>
+                            <th class="p-0 min-w-50px"></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="px-0 py-3">
+                              <div class="symbol symbol-55px mt-1 me-5">
+                                <div class="symbol-label symbol-40px symbol-circle me-4"><span
+                                    class="bg-light-primary text-primary symbol-label fw-boldest">{{simulationInfo._id.$oid | slice:21:24}}</span>
+                                </div>
+                              </div>
+                            </td>
+                            <td></td>
+                            <td class="text-end">
+                              <span class="text-gray-800 fw-bolder d-block fs-6">{{simulationInfo.n_jobs}}</span>
+                              <span class="text-muted fw-bold d-block mt-1 fs-7">Número de trabalhos</span>
+                            </td>
+                            <td class="text-end">
+                              <span class="text-gray-800 fw-bolder d-block fs-6">{{simulationInfo.n_operations}}</span>
+                              <span class="text-muted fw-bold d-block mt-1 fs-7">Número de operações</span>
+                            </td>
+                            <td class="text-end pe-0">
+                              <a class="btn btn-icon btn-bg-light btn-active-danger btn-sm"
+                                [swal]="{ title: 'Tem a certeza que quer remover a simulação com o id:' + simulationInfo._id.$oid, showCancelButton: true, icon: 'warning'}"
+                                (confirm)="deleteSimulation()">
+                                <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                <span class="svg-icon svg-icon-4">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path
+                                      d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                    <path fill-rule="evenodd"
+                                      d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                  </svg>
+                                </span>
+                                <!--end::Svg Icon-->
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <!--end::Body-->
+                  <!--begin::Footer-->
+
+                </div>
+                <!--end::Stats Widget 8-->
+                <!--begin::Stats Widget 9-->
+
+              </div>
+            </div>
+            <div class="row g-0 g-xl-5 g-xxl-8">
+              <div class="col-xl-12">
+                <!--begin::Stats Widget 8-->
+                <div class="card mb-5 mb-xxl-8">
+                  <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column">
+                      <span class="card-label fw-bolder text-dark fs-3">Tabela</span>
+                      <span class="text-muted mt-2 fw-bold fs-6">Tabela de trabalhos e operações</span>
+                    </h3>
+                    <div class="card-toolbar">
+                      <a href="http://localhost:5000/simulations/{{simulationInfo._id.$oid}}/download" type="button"
+                        class="btn btn-sm btn-light">
+                        <img src="../../assets/media/svg/brand-logos/filetype-txt.svg" class="w-20px h-20px me-3"
+                          alt="">
+                        Download da tabela .txt
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+
+                    <form [formGroup]="formBuilder">
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead>
+                            <tr class="fw-bolder fs-6 text-gray-800">
+                              <th>#</th>
+
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr formArrayName="jobs"
+                              *ngFor="let job of formBuilder.get('jobs')['controls']; let i = index">
+                              <td>
+                                Job {{ i }}
+                              </td>
+                              <ng-container [formGroupName]="i">
+                                <td formArrayName="operations" *ngFor="
+                                  let operation of formBuilder
+                                    .get('jobs')
+                                    ['controls'][i].get('operations')['controls'];
+                                  let ind = index
+                                "><input type="text" class="form-control" [formControlName]="ind" value="{{operation.value}}" required [ngClass]="{'is-valid': formBuilder.get('jobs')['controls'][i].get('operations').touched && formBuilder.get('jobs')['controls'][i].get('operations'), 'is-invalid': formBuilder.get('jobs')['controls'][i].get('operations')['controls'][ind].touched && formBuilder.get('jobs')['controls'][i].get('operations')['controls'][ind].invalid}">
+                                </td>
+                              </ng-container>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </form>
+
+                    <button class="btn btn-primary" (click)="updateValue()" [disabled]="formBuilder.invalid">Atualizar trabalhos e operações</button>
+                </div>
+
+              </div>
+            </div>
+            <div class="row g-0 g-xl-5 g-xxl-8">
+              <div class="col-xl-12">
+                <!--begin::Stats Widget 8-->
+                <div class="card mb-5 mb-xxl-8">
+                  <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column">
+                      <span class="card-label fw-bolder text-dark fs-3">Google</span>
+                      <span class="text-muted mt-2 fw-bold fs-6">Grafico de tempos google. O tempo da ultima operação termina no {{googleInfo.Optimal}}</span>
+                    </h3>
+                    <div class="card-toolbar">
+                      <a href="http://localhost:5000/simulations/{{simulationInfo._id.$oid}}/google/download"
+                        type="button" class="btn btn-sm btn-light">
+                        <img src="../../assets/media/svg/brand-logos/google-icon.svg" class="w-20px h-20px me-3" alt="">
+                        Download Google .txt
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div id="chart">
+                      <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [fill]="chartOptions.fill"
+                        [grid]="chartOptions.grid" [dataLabels]="chartOptions.dataLabels"
+                        [plotOptions]="chartOptions.plotOptions" [xaxis]="chartOptions.xaxis"
+                        [yaxis]="chartOptions.yaxis"></apx-chart>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+        <!--begin::Container-->
+        <div class="container-xxl d-flex flex-column flex-md-row flex-stack">
+          <!--begin::Copyright-->
+          <div class="text-dark order-2 order-md-1">
+            <span class="text-muted fw-bold me-2">2022©</span>
+            <a href="#" target="_blank" class="text-gray-800 text-hover-primary">Fátima</a>
+          </div>
+          <!--end::Copyright-->
+          <!--begin::Menu-->
+          <ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
+            <li class="menu-item">
+              <a href="https://ipca.pt" target="_blank" class="menu-link px-2">IPCA</a>
+            </li>
+            <li class="menu-item">
+              <a href="https://developers.google.com/optimization/scheduling/job_shop" target="_blank"
+                class="menu-link px-2">OR-Tools Job Shop Problem</a>
+            </li>
+          </ul>
+          <!--end::Menu-->
+        </div>
+        <!--end::Container-->
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,496 @@
+<div class="d-flex flex-column flex-root">
+  <!--begin::Page-->
+  <div class="page d-flex flex-row flex-column-fluid">
+    <!--begin::Aside-->
+    <!--end::Aside-->
+    <!--begin::Wrapper-->
+    <div class="wrapper d-flex flex-column flex-row-fluid">
+      <!--begin::Header-->
+      <app-top-navbar></app-top-navbar>
+      <!--end::Header-->
+      <!--begin::Main-->
+      <div class="d-flex flex-column flex-column-fluid">
+        <!--begin::Content-->
+        <div class="content fs-6 d-flex flex-column-fluid">
+          <!--begin::Container-->
+          <div class="container-xxl">
+            <div class="row g-0 g-xl-5 g-xxl-8">
+              <div class="col-xl-4">
+                <!--begin::Stats Widget 8-->
+                <div class="card card-stretch-50 mb-5 mb-xxl-8">
+                  <!--begin::Body-->
+                  <div class="card-body">
+                    <div id="kt_stats_widget_8_carousel" class="carousel carousel-custom slide" data-bs-ride="carousel"
+                      data-bs-interval="8000">
+                      <!--begin::Heading-->
+                      <div class="d-flex flex-stack flex-wrap">
+                        <!--begin::Label-->
+                        <span class="fs-6 text-muted fw-bolder pe-2">Criar Simulação</span>
+                        <!--end::Label-->
+                        <!--begin::Carousel Indicators-->
+                        <ol class="p-0 m-0 carousel-indicators carousel-indicators-dots">
+                          <li data-bs-target="#kt_stats_widget_8_carousel" data-bs-slide-to="0" class="ms-1 active">
+                          </li>
+                        </ol>
+                        <!--end::Carousel Indicators-->
+                      </div>
+                      <!--end::Heading-->
+                      <!--begin::Carousel-->
+                      <div class="carousel-inner pt-8">
+                        <!--begin::Item-->
+                        <div class="carousel-item active">
+                          <!--begin::Section-->
+                          <div class="d-flex flex-column justify-content-between h-100">
+                            <!--begin::Title-->
+                            <h3 class="fs-3 text-gray-800 text-hover-primary fw-bolder cursor-pointer">Simulação
+                            </h3>
+                            <!--end::Title-->
+                            <!--begin::Text-->
+                            <p class="text-gray-600 fw-bold pt-3 mb-0">Clique no botão em baixo para criar uma simulação
+                            </p>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Section-->
+                        </div>
+                      </div>
+                      <!--end::Carousel-->
+                    </div>
+                  </div>
+                  <!--end::Body-->
+                  <!--begin::Footer-->
+                  <div class="card-footer border-0 d-flex flex-stack pt-0 pb-10">
+                    <!--begin::Label-->
+                    <span class="text-muted fs-6 fw-bold pe-2"></span>
+                    <!--end::Label-->
+                    <a href="#" class="btn btn-sm btn-danger fw-bolder px-6" data-bs-toggle="modal"
+                      data-bs-target="#modal_create_simulation">Criar simulação</a>
+                  </div>
+                  <!--end::Footer-->
+                </div>
+                <!--end::Stats Widget 8-->
+                <!--begin::Stats Widget 9-->
+                <div class="card card-stretch-50 mb-5 mb-xxl-8">
+                  <!--begin::Body-->
+                  <div class="card-body">
+                    <div id="kt_stats_widget_9_carousel" class="carousel carousel-custom slide" data-bs-ride="carousel"
+                      data-bs-interval="8000">
+                      <!--begin::Top-->
+                      <div class="d-flex flex-stack flex-wrap">
+                        <!--begin::Label-->
+                        <span class="text-muted fw-bolder pe-2">Criar Utilizador</span>
+                        <!--end::Label-->
+                        <!--begin::Carousel Indicators-->
+                        <ol class="p-0 m-0 carousel-indicators carousel-indicators-dots">
+                          <li data-bs-target="#kt_stats_widget_9_carousel" data-bs-slide-to="0" class="ms-1 active">
+                          </li>
+
+                        </ol>
+                        <!--end::Carousel Indicators-->
+                      </div>
+                      <!--end::Top-->
+                      <!--begin::Carousel-->
+                      <div class="carousel-inner pt-9">
+                        <!--begin::Item-->
+                        <div class="carousel-item active">
+                          <!--begin::Section-->
+                          <div class="flex-grow-1">
+                            <!--begin::Title-->
+                            <h3 class="fs-3 text-gray-800 text-hover-primary fw-bolder cursor-pointer">Utilizador</h3>
+                            <!--end::Title-->
+                            <!--begin::Text-->
+                            <p class="text-gray-600 fw-bold pt-3 mb-0">Clique no botão em baixo para criar um utilizador
+                            </p>
+                            <!--end::Text-->
+                          </div>
+                          <!--end::Section-->
+                        </div>
+
+                      </div>
+                      <!--end::Carousel-->
+                    </div>
+                  </div>
+                  <!--end::Body-->
+                  <!--begin::Footer-->
+                  <div class="card-footer border-0 d-flex flex-stack pt-0 pb-10">
+                    <!--begin::Label-->
+                    <span class="text-muted fs-6 fw-bold pe-2"></span>
+                    <!--end::Label-->
+                    <a class="btn btn-sm btn-success fw-bolder px-6" data-bs-toggle="modal"
+                      data-bs-target="#modal_create_user">Criar Utilizador</a>
+                  </div>
+                  <!--end::Footer-->
+                </div>
+                <!--end::Stats Widget 9-->
+              </div>
+              <div class="col-xl-8">
+                <!--begin::Table Widget 2-->
+                <div class="card card-stretch">
+                  <!--begin::Header-->
+                  <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column">
+                      <span class="card-label fw-bolder text-dark fs-3">Simulações</span>
+                      <span class="text-muted mt-2 fw-bold fs-6">Simulações criadas</span>
+                    </h3>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body pt-3 pb-0 mt-n3">
+                    <div class="tab-content mt-4" id="myTabTables2">
+                      <div class="tab-pane fade show active" id="kt_tab_pane_2_1" role="tabpanel"
+                        aria-labelledby="kt_tab_pane_2_1">
+                        <!--begin::Table-->
+                        <div class="table-responsive">
+                          <table class="table table-borderless align-middle">
+                            <thead>
+                              <tr>
+                                <th class="p-0 w-50px"></th>
+                                <th class="p-0 min-w-150px"></th>
+                                <th class="p-0 min-w-120px"></th>
+                                <th class="p-0 min-w-70px"></th>
+                                <th class="p-0 min-w-70px"></th>
+                                <th class="p-0 min-w-50px"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let sim of simulations">
+                                <td class="px-0 py-3">
+                                  <div class="symbol symbol-55px mt-1 me-5">
+                                    <div class="symbol-label symbol-40px symbol-circle me-4"><span
+                                        class="bg-light-primary text-primary symbol-label fw-boldest">{{sim._id.$oid | slice:21:24}}</span>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="px-0">
+                                  <a href="#"
+                                    class="text-gray-800 fw-bolder text-hover-primary fs-6">{{sim._id.$oid}}</a>
+                                  <span class="text-muted fw-bold d-block mt-1">Id da simulação</span>
+                                </td>
+                                <td></td>
+                                <td class="text-end">
+                                  <span class="text-gray-800 fw-bolder d-block fs-6">{{sim.n_jobs}}</span>
+                                  <span class="text-muted fw-bold d-block mt-1 fs-7">Número de trabalhos</span>
+                                </td>
+                                <td class="text-end">
+                                  <span class="text-gray-800 fw-bolder d-block fs-6">{{sim.n_operations}}</span>
+                                  <span class="text-muted fw-bold d-block mt-1 fs-7">Número de operações</span>
+                                </td>
+                                <td class="text-end pe-0">
+                                  <a href="/simulation/{{sim._id.$oid}}"
+                                    class="btn btn-icon btn-bg-light btn-active-primary btn-sm">
+                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                    <span class="svg-icon svg-icon-4">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1"
+                                          transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                        <path
+                                          d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+                                          fill="currentColor"></path>
+                                      </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--end::Table-->
+                      </div>
+                    </div>
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Table Widget 2-->
+              </div>
+            </div>
+            <div class="row g-0 g-xl-5 g-xxl-8">
+
+              <div class="col-xl-12">
+                <!--begin::Table Widget 2-->
+                <div class="card">
+                  <!--begin::Header-->
+                  <div class="card-header border-0 pt-5">
+                    <h3 class="card-title align-items-start flex-column">
+                      <span class="card-label fw-bolder text-dark fs-3">Utilizadores</span>
+                      <span class="text-muted mt-2 fw-bold fs-6">Utilizadores do sistema</span>
+                    </h3>
+                  </div>
+                  <!--end::Header-->
+                  <!--begin::Body-->
+                  <div class="card-body pt-3 pb-0 mt-n3">
+                    <div class="tab-content mt-4" id="myTabTables2">
+                      <div class="tab-pane fade show active" id="kt_tab_pane_2_1" role="tabpanel"
+                        aria-labelledby="kt_tab_pane_2_1">
+                        <!--begin::Table-->
+                        <div class="table-responsive">
+                          <table class="table table-borderless align-middle">
+                            <thead>
+                              <tr>
+                                <th class="p-0 w-50px"></th>
+                                <th class="p-0 min-w-150px"></th>
+                                <th class="p-0 min-w-120px"></th>
+                                <th class="p-0 min-w-70px"></th>
+                                <th class="p-0 min-w-70px"></th>
+                                <th class="p-0 min-w-50px"></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let user of users">
+                                <td class="px-0 py-3">
+                                  <div class="symbol symbol-55px mt-1 me-5">
+                                    <div class="symbol-label symbol-40px symbol-circle me-4"><span
+                                        class="bg-light-primary text-primary symbol-label fw-boldest">{{user.name | slice:0:2}}</span>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="px-0">
+                                  <a href="#"
+                                    class="text-gray-800 fw-bolder text-hover-primary fs-6">{{user._id.$oid}}</a>
+                                  <span class="text-muted fw-bold d-block mt-1">Id do utilizador</span>
+                                </td>
+                                <td></td>
+                                <td class="text-end">
+                                  <span class="text-gray-800 fw-bolder d-block fs-6">{{user.name}}</span>
+                                  <span class="text-muted fw-bold d-block mt-1 fs-7">Nome do utilizador</span>
+                                </td>
+                                <td class="text-end">
+                                  <span class="text-gray-800 fw-bolder d-block fs-6">{{user.email}}</span>
+                                  <span class="text-muted fw-bold d-block mt-1 fs-7">Email do utilizador</span>
+                                </td>
+                                <td class="text-end pe-0">
+                                  <a href="/user/{{user._id.$oid}}"
+                                    class="btn btn-icon btn-bg-light btn-active-primary btn-sm">
+                                    <!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
+                                    <span class="svg-icon svg-icon-4">
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none">
+                                        <rect opacity="0.5" x="18" y="13" width="13" height="2" rx="1"
+                                          transform="rotate(-180 18 13)" fill="currentColor"></rect>
+                                        <path
+                                          d="M15.4343 12.5657L11.25 16.75C10.8358 17.1642 10.8358 17.8358 11.25 18.25C11.6642 18.6642 12.3358 18.6642 12.75 18.25L18.2929 12.7071C18.6834 12.3166 18.6834 11.6834 18.2929 11.2929L12.75 5.75C12.3358 5.33579 11.6642 5.33579 11.25 5.75C10.8358 6.16421 10.8358 6.83579 11.25 7.25L15.4343 11.4343C15.7467 11.7467 15.7467 12.2533 15.4343 12.5657Z"
+                                          fill="currentColor"></path>
+                                      </svg>
+                                    </span>
+                                    <!--end::Svg Icon-->
+                                  </a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <!--end::Table-->
+                      </div>
+                    </div>
+                  </div>
+                  <!--end::Body-->
+                </div>
+                <!--end::Table Widget 2-->
+              </div>
+            </div>
+            <!--end::Row-->
+          </div>
+          <!--end::Container-->
+        </div>
+        <!--end::Content-->
+      </div>
+      <!--end::Main-->
+      <!--begin::Footer-->
+      <div class="footer py-4 d-flex flex-lg-column" id="kt_footer">
+        <!--begin::Container-->
+        <div class="container-xxl d-flex flex-column flex-md-row flex-stack">
+          <!--begin::Copyright-->
+          <div class="text-dark order-2 order-md-1">
+            <span class="text-muted fw-bold me-2">2022©</span>
+            <a href="#" target="_blank" class="text-gray-800 text-hover-primary">Fátima</a>
+          </div>
+          <!--end::Copyright-->
+          <!--begin::Menu-->
+          <ul class="menu menu-gray-600 menu-hover-primary fw-bold order-1">
+            <li class="menu-item">
+              <a href="https://ipca.pt" target="_blank" class="menu-link px-2">IPCA</a>
+            </li>
+            <li class="menu-item">
+              <a href="https://developers.google.com/optimization/scheduling/job_shop" target="_blank"
+                class="menu-link px-2">OR-Tools Job Shop Problem</a>
+            </li>
+          </ul>
+          <!--end::Menu-->
+        </div>
+        <!--end::Container-->
+      </div>
+      <!--end::Footer-->
+    </div>
+    <!--end::Wrapper-->
+  </div>
+  <!--end::Page-->
+</div>
+<div class="modal fade" id="modal_create_user" tabindex="-1" aria-modal="true" style="display: none;" role="dialog">
+  <!--begin::Modal dialog-->
+  <div class="modal-dialog mw-1000px">
+    <!--begin::Modal content-->
+    <div class="modal-content">
+      <!--begin::Modal header-->
+      <div class="modal-header">
+        <!--begin::Title-->
+        <h2>Criar utilizador</h2>
+        <!--end::Title-->
+        <!--begin::Close-->
+        <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+          <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+          <span class="svg-icon svg-icon-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)"
+                fill="currentColor"></rect>
+              <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor">
+              </rect>
+            </svg>
+          </span>
+          <!--end::Svg Icon-->
+        </div>
+        <!--end::Close-->
+      </div>
+      <!--end::Modal header-->
+      <!--begin::Modal body-->
+      <form [formGroup]="createUserForm" (ngSubmit)="onCreateUser()">
+        <div class="modal-body">
+          <div class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework p-5">
+            <!--begin::Title-->
+            <div class="pb-5 pb-lg-15">
+              <h3 class="fw-bolder text-dark display-6">Registar Utilizador</h3>
+              <p class="text-muted fw-bold fs-3">Preencha os detalhes do utilizador</p>
+            </div>
+            <!--end::Title-->
+            <!--begin::Form group-->
+            <div class="fv-row mb-5 fv-plugins-icon-container">
+              <label class="form-label fs-6 fw-bolder text-dark pt-5">Nome</label>
+              <input class="form-control form-control-lg form-control-solid" type="text" placeholder=""
+                formControlName="name" name="fullname" autocomplete="off">
+              <div class="fv-plugins-message-container invalid-feedback"
+                *ngIf="createUserForm.get('name')?.touched && createUserForm.get('name')?.invalid">
+                <div>É necessario preencher este campo</div>
+              </div>
+            </div>
+            <!--end::Form group-->
+            <!--begin::Form group-->
+            <div class="fv-row mb-5 fv-plugins-icon-container">
+              <label class="form-label fs-6 fw-bolder text-dark pt-5">Email</label>
+              <input class="form-control form-control-lg form-control-solid" type="email" placeholder=""
+                formControlName="email" name="email" autocomplete="off">
+
+              <div class="fv-plugins-message-container invalid-feedback"
+                *ngIf="createUserForm.get('email')?.touched && createUserForm.get('email')?.invalid">
+                <div>Endereço de email invalido</div>
+              </div>
+            </div>
+            <!--end::Form group-->
+            <!--begin::Form group-->
+            <div class="fv-row mb-5 fv-plugins-icon-container">
+              <label class="form-label fs-6 fw-bolder text-dark pt-5">Palavra-passe</label>
+              <input class="form-control form-control-lg form-control-solid" type="password" formControlName="password"
+                placeholder="" name="password" autocomplete="off">
+                <div class="fv-plugins-message-container invalid-feedback"
+                *ngIf="createUserForm.get('password')?.touched && createUserForm.get('password')?.invalid">
+                <div>É necessario preencher este campo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--begin::Modal footer-->
+        <div class="modal-footer d-flex justify-content-end">
+          <a href="#" class="btn btn-active-light me-5" data-bs-dismiss="modal">Cancelar</a>
+          <button type="submit" class="btn btn-primary" [disabled]="createUserForm.invalid"
+            data-bs-dismiss="modal">Criar utilizador</button>
+        </div>
+      </form>
+      <!--end::Modal footer-->
+    </div>
+    <!--end::Modal content-->
+  </div>
+  <!--end::Modal dialog-->
+</div>
+
+<div class="modal fade" id="modal_create_simulation" tabindex="-1" aria-modal="true" style="display: none;" role="dialog">
+  <!--begin::Modal dialog-->
+  <div class="modal-dialog mw-1000px">
+    <!--begin::Modal content-->
+    <div class="modal-content">
+      <!--begin::Modal header-->
+      <div class="modal-header">
+        <!--begin::Title-->
+        <h2>Criar utilizador</h2>
+        <!--end::Title-->
+        <!--begin::Close-->
+        <div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+          <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
+          <span class="svg-icon svg-icon-1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)"
+                fill="currentColor"></rect>
+              <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="currentColor">
+              </rect>
+            </svg>
+          </span>
+          <!--end::Svg Icon-->
+        </div>
+        <!--end::Close-->
+      </div>
+      <!--end::Modal header-->
+      <!--begin::Modal body-->
+      <form [formGroup]="createSimulationForm" (ngSubmit)="onCreateSimulation()">
+        <div class="modal-body">
+          <div class="form w-100 fv-plugins-bootstrap5 fv-plugins-framework p-5">
+            <!--begin::Title-->
+            <div class="pb-5 pb-lg-15">
+              <h3 class="fw-bolder text-dark display-6">Criar simulação</h3>
+              <p class="text-muted fw-bold fs-3">Preencha os detalhes da simulação</p>
+            </div>
+            <!--end::Title-->
+            <!--begin::Form group-->
+            <div class="fv-row mb-5 fv-plugins-icon-container">
+              <label class="form-label fs-6 fw-bolder text-dark pt-5">Número de maquinas</label>
+              <input class="form-control form-control-lg form-control-solid" type="number" placeholder=""
+                formControlName="n_machines" name="fullname" autocomplete="off">
+              <div class="fv-plugins-message-container invalid-feedback"
+                *ngIf="createSimulationForm.get('n_machines')?.touched && createSimulationForm.get('n_machines')?.invalid">
+                <div>É necessario preencher este campo</div>
+              </div>
+            </div>
+            <!--end::Form group-->
+            <!--begin::Form group-->
+            <div class="fv-row mb-5 fv-plugins-icon-container">
+              <label class="form-label fs-6 fw-bolder text-dark pt-5">Número de trabalhos</label>
+              <input class="form-control form-control-lg form-control-solid" type="number" placeholder=""
+                formControlName="n_jobs" name="email" autocomplete="off">
+
+              <div class="fv-plugins-message-container invalid-feedback"
+                *ngIf="createSimulationForm.get('n_jobs')?.touched && createSimulationForm.get('n_jobs')?.invalid">
+                <div>Endereço de email invalido</div>
+              </div>
+            </div>
+            <!--end::Form group-->
+            <!--begin::Form group-->
+            <div class="fv-row mb-5 fv-plugins-icon-container">
+              <label class="form-label fs-6 fw-bolder text-dark pt-5">Número de operações</label>
+              <input class="form-control form-control-lg form-control-solid" type="number" formControlName="n_operations"
+                placeholder="" name="password" autocomplete="off">
+                <div class="fv-plugins-message-container invalid-feedback"
+                *ngIf="createSimulationForm.get('n_operations')?.touched && createSimulationForm.get('n_operations')?.invalid">
+                <div>É necessario preencher este campo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--begin::Modal footer-->
+        <div class="modal-footer d-flex justify-content-end">
+          <a href="#" class="btn btn-active-light me-5" data-bs-dismiss="modal">Cancelar</a>
+          <button type="submit" class="btn btn-primary" [disabled]="createSimulationForm.invalid"
+            data-bs-dismiss="modal">Criar simulação</button>
+        </div>
+      </form>
+      <!--end::Modal footer-->
+    </div>
+    <!--end::Modal content-->
+  </div>
+  <!--end::Modal dialog-->
+</div>
